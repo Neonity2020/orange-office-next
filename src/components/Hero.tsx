@@ -70,29 +70,29 @@ const Hero: React.FC = () => {
       
       {/* 内容区域 */}
       <div className="relative z-10 text-center px-4 max-w-7xl mx-auto">
-        <h1 className="text-5xl md:text-6xl font-bold text-white mb-2">智启未来 · 橙就卓越</h1>
-        <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">安迪 · AI企业培训专家</h2>
-        <p className="text-xl md:text-2xl text-orange-200 mb-10">微软Office Master大师 | AI赋能办公体系专家</p>
+        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-2 leading-tight">智启未来 · 橙就卓越</h1>
+        <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-4 md:mb-6">安迪 · AI企业培训专家</h2>
+        <p className="text-lg sm:text-xl md:text-2xl text-orange-200 mb-8 md:mb-10">微软Office Master大师 | AI赋能办公体系专家</p>
         
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
-          <div className="glass-card rounded-lg p-6 text-white w-64 transition-all duration-300">
-            <i className="fas fa-brain text-3xl mb-3 text-orange-300"></i>
-            <h3 className="text-xl font-bold mb-2">AI赋能办公</h3>
-            <p className="text-orange-100">将AI技术与办公软件深度融合，提升企业效率</p>
+        <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-4 mb-8 md:mb-12">
+          <div className="glass-card rounded-lg p-4 md:p-6 text-white w-full sm:w-64 transition-all duration-300">
+            <i className="fas fa-brain text-2xl md:text-3xl mb-2 md:mb-3 text-orange-300"></i>
+            <h3 className="text-lg md:text-xl font-bold mb-1 md:mb-2">AI赋能办公</h3>
+            <p className="text-sm md:text-base text-orange-100">将AI技术与办公软件深度融合，提升企业效率</p>
           </div>
-          <div className="glass-card rounded-lg p-6 text-white w-64 transition-all duration-300">
-            <i className="fas fa-chart-line text-3xl mb-3 text-orange-300"></i>
-            <h3 className="text-xl font-bold mb-2">数据分析</h3>
-            <p className="text-orange-100">复杂数据分析技能转化为易于理解的课程内容</p>
+          <div className="glass-card rounded-lg p-4 md:p-6 text-white w-full sm:w-64 transition-all duration-300">
+            <i className="fas fa-chart-line text-2xl md:text-3xl mb-2 md:mb-3 text-orange-300"></i>
+            <h3 className="text-lg md:text-xl font-bold mb-1 md:mb-2">数据分析</h3>
+            <p className="text-sm md:text-base text-orange-100">复杂数据分析技能转化为易于理解的课程内容</p>
           </div>
-          <div className="glass-card rounded-lg p-6 text-white w-64 transition-all duration-300">
-            <i className="fas fa-user-tie text-3xl mb-3 text-orange-300"></i>
-            <h3 className="text-xl font-bold mb-2">实战培训</h3>
-            <p className="text-orange-100">500强企业实战经验，真实场景案例教学</p>
+          <div className="glass-card rounded-lg p-4 md:p-6 text-white w-full sm:w-64 transition-all duration-300">
+            <i className="fas fa-user-tie text-2xl md:text-3xl mb-2 md:mb-3 text-orange-300"></i>
+            <h3 className="text-lg md:text-xl font-bold mb-1 md:mb-2">实战培训</h3>
+            <p className="text-sm md:text-base text-orange-100">500强企业实战经验，真实场景案例教学</p>
           </div>
         </div>
         
-        <button className="bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105">
+        <button className="bg-orange-500 hover:bg-orange-600 text-white font-bold py-2 px-6 md:py-3 md:px-8 rounded-full text-base md:text-lg transition-all duration-300 transform hover:scale-105">
           预约培训咨询
         </button>
       </div>
