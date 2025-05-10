@@ -14,7 +14,7 @@ export default function Navbar() {
               {/* <i className="fas fa-user-tie"></i> */}
               <img src="/logo.jpg" alt="logo" className="w-full h-full object-cover" />
             </div>
-            <span className="text-xl font-bold text-gray-800">美橙培训</span>
+            <span className="text-xl font-bold text-gray-800">美橙办公</span>
           </div>
           
           {/* Desktop Navigation */}

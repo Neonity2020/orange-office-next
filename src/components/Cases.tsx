@@ -22,7 +22,7 @@ const cases: Case[] = [
   {
     id: 1,
     company: '华润医疗集团',
-    logo: '/images/clients/华润医疗.png',
+    logo: '/images/clients/hua-run-logo.webp',
     title: '华润医疗集团',
     subtitle: 'AIGC训练营 | 健康产业营销方案',
     metrics: [
@@ -44,7 +44,7 @@ const cases: Case[] = [
   {
     id: 3,
     company: '中电金信',
-    logo: '/images/clients/中电金信.png',
+    logo: '/images/clients/zhong-jin.jpg',
     title: '中电金信',
     subtitle: 'AIGC训练营 | AI+办公领域应用',
     metrics: [

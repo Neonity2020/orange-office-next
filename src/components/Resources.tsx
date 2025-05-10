@@ -64,7 +64,7 @@ export default function Resources() {
         <div className="bg-gradient-to-r from-amber-500 to-amber-600 rounded-xl p-8 text-white mb-12">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div>
-              <h3 className="text-2xl font-bold mb-4">关注公众号获取更多资源</h3>
+              <h3 id="qrcode" className="text-2xl font-bold mb-4">关注公众号获取更多资源</h3>
               <p className="mb-6">扫描右侧二维码关注&ldquo;智启未来&rdquo;公众号，回复&ldquo;资源包&rdquo;即可获取完整AI办公资源合集，包括：</p>
               <ul className="space-y-2 mb-6">
                 <li className="flex items-start">
@@ -90,9 +90,9 @@ export default function Resources() {
             </div>
             <div className="flex flex-col items-center justify-center">
               <div className="bg-white p-4 rounded-lg w-48 h-48 flex items-center justify-center mb-4">
-                <img src="https://via.placeholder.com/150x150?text=扫码关注" alt="智启未来公众号二维码" />
+                <img src="/images/mc-qrcode.jpg" alt="美橙办公公众号二维码" />
               </div>
-              <p className="text-center">扫码关注&ldquo;智启未来&rdquo;公众号</p>
+              <p className="text-center">扫码关注&ldquo;美橙办公&rdquo;公众号</p>
             </div>
           </div>
         </div>

@@ -11,13 +11,13 @@ export default function Footer() {
               <div className="w-10 h-10 rounded-full bg-amber-500 flex items-center justify-center text-white font-bold mr-2">
                 <img src="/logo.jpg" alt="logo" className="w-full h-full object-cover" />
               </div>
-              <span className="text-xl font-bold">美橙培训</span>
+              <span className="text-xl font-bold">美橙办公</span>
             </div>
             <p className="text-gray-400 mb-4">
               专注于AI企业培训与数字化转型服务，助力企业实现智能化升级
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-orange-500 transition-colors">
+              <a href="#qrcode" className="text-gray-400 hover:text-orange-500 transition-colors">
                 <i className="fab fa-weixin text-2xl"></i>
               </a>
               <a href="#" className="text-gray-400 hover:text-orange-500 transition-colors">
@@ -110,7 +110,7 @@ export default function Footer() {
         <div className="border-t border-gray-800 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 text-sm mb-4 md:mb-0">
-              © 2024 美橙培训. 保留所有权利
+              © 2024 美橙办公. 保留所有权利
             </p>
             <div className="flex space-x-6">
               <a href="#" className="text-gray-400 hover:text-orange-500 text-sm transition-colors">

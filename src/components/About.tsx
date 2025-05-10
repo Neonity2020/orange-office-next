@@ -32,12 +32,6 @@ const books: Book[] = [
     publisher: '电子工业出版社',
     coverImage: '/images/books/数据分析PNG.png'
   },
-  {
-    id: 4,
-    title: '《趣学！职场Excel的新玩法》',
-    publisher: '清华大学出版社',
-    coverImage: '/images/books/趣学职场PNG.png'
-  }
 ];
 
 const certificates: Certificate[] = [
@@ -153,30 +147,28 @@ export default function About() {
                 </p>
               </div>
             </div>
-            
-            <div className="bg-white rounded-xl shadow-md p-6">
-              <div className="flex justify-between items-center mb-4">
-                <h4 className="font-bold">出版书籍</h4>
-              </div>
-              <div className="grid grid-cols-2 gap-4">
-                {books.map(book => (
-                  <div key={book.id} className="flex flex-col items-center text-center">
-                    <div className="w-32 h-40 bg-gray-100 mb-2 rounded-lg overflow-hidden">
-                      <img 
-                        src={book.coverImage} 
-                        alt={book.title}
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                    <p className="text-sm text-gray-700">{book.title}</p>
-                    <p className="text-xs text-gray-500">{book.publisher}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
           </div>
         </div>
-        
+        <div className="bg-white rounded-xl shadow-md p-6 mb-12">
+          <div className="flex justify-between items-center mb-4">
+            <h4 className="font-bold">出版书籍</h4>
+          </div>
+          <div className="flex gap-6 overflow-x-auto pb-4">
+            {books.map(book => (
+              <div key={book.id} className="flex flex-col items-center text-center min-w-[160px]">
+                <div className="w-32 h-40 bg-gray-100 mb-2 rounded-lg overflow-hidden">
+                  <img 
+                    src={book.coverImage} 
+                    alt={book.title}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <p className="text-sm text-gray-700">{book.title}</p>
+                <p className="text-xs text-gray-500">{book.publisher}</p>
+              </div>
+            ))}
+          </div>
+        </div>
         <div className="bg-white rounded-xl shadow-md p-6 mb-12">
           <div className="flex justify-between items-center mb-6">
             <h3 className="text-xl font-bold">荣誉与资质证书</h3>

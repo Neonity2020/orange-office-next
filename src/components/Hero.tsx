@@ -60,7 +60,7 @@ const Hero: React.FC = () => {
   };
 
   return (
-    <section className="w-full h-screen flex items-center justify-center overflow-hidden" style={{ backgroundColor: '#121926', position: 'relative' }}>
+    <section id="home" className="w-full h-screen flex items-center justify-center overflow-hidden" style={{ backgroundColor: '#121926', position: 'relative' }}>
       {/* 粒子容器 - 移至最底层 */}
       <div 
         id="particle-container"
