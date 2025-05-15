@@ -112,6 +112,10 @@ export default function Footer() {
             <p className="text-gray-400 text-sm mb-4 md:mb-0">
               © 2024 美橙办公. 保留所有权利
             </p>
+            <p>
+              <a href="https://beian.miit.gov.cn/" target="_blank">辽ICP备2023000799号-2</a>
+
+            </p>
             <div className="flex space-x-6">
               <a href="#" className="text-gray-400 hover:text-orange-500 text-sm transition-colors">
                 隐私政策
