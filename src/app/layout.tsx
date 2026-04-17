@@ -17,8 +17,12 @@ const notoSansSC = Noto_Sans_SC({
 });
 
 export const metadata: Metadata = {
-  title: "智启未来 · 橙就卓越 | 安迪 · AI企业培训专家",
+  title: {
+    default: "智启未来 - 橙就卓越 | 安迪 AI企业培训专家",
+    template: "%s | 安迪 AI企业培训",
+  },
   description: "AI企业培训专家，提供AI赋能办公、数据分析和实战培训服务",
+  metadataBase: new URL("https://orange-office.online"),
 };
 
 export default function RootLayout({
