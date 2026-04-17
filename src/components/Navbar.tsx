@@ -34,6 +34,9 @@ export default function Navbar() {
             <a href="#resources" className="nav-link text-gray-700 hover:text-amber-500">
               资源中心
             </a>
+            <a href="https://nbrm.orange-office.online" target="_blank" rel="noopener noreferrer" className="nav-link text-gray-700 hover:text-amber-500">
+              AI工具canva
+            </a>
           </div>
           
           <div className="relative">
