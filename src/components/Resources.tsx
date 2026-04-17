@@ -65,7 +65,7 @@ export default function Resources() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div>
               <h3 id="qrcode" className="text-2xl font-bold mb-4">关注公众号获取更多资源</h3>
-              <p className="mb-6">扫描右侧二维码关注&ldquo;智启未来&rdquo;公众号，回复&ldquo;资源包&rdquo;即可获取完整AI办公资源合集，包括：</p>
+              <p className="mb-6">扫描右侧二维码关注&ldquo;美橙办公&rdquo;公众号，回复&ldquo;资源包&rdquo;即可获取完整AI办公资源合集，包括：</p>
               <ul className="space-y-2 mb-6">
                 <li className="flex items-start">
                   <i className="fas fa-check-circle mt-1 mr-2"></i>

@@ -67,19 +67,19 @@ export default function Footer() {
             <ul className="space-y-2">
               <li className="flex items-center text-gray-400">
                 <i className="fas fa-envelope mr-2"></i>
-                <a href="mailto:contact@example.com" className="hover:text-orange-500 transition-colors">
-                  contact@example.com
+                <a href="mailto:contact@orange-office.online" className="hover:text-orange-500 transition-colors">
+                  contact@orange-office.online
                 </a>
               </li>
               <li className="flex items-center text-gray-400">
-                <i className="fas fa-phone mr-2"></i>
-                <a href="tel:+8612345678900" className="hover:text-orange-500 transition-colors">
-                  +86 123 4567 8900
+                <i className="fab fa-weixin mr-2"></i>
+                <a href="#qrcode" className="hover:text-orange-500 transition-colors">
+                  微信公众号：美橙办公
                 </a>
               </li>
               <li className="flex items-center text-gray-400">
                 <i className="fas fa-map-marker-alt mr-2"></i>
-                <span>北京市朝阳区xxx大厦</span>
+                <span>美橙办公（线上服务）</span>
               </li>
             </ul>
           </div>
