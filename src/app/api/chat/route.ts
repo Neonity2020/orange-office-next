@@ -2,14 +2,14 @@ import OpenAI from 'openai';
 import { NextRequest } from 'next/server';
 
 const client = new OpenAI({
-  apiKey: process.env.SILICONFLOW_API_KEY,
-  baseURL: 'https://api.siliconflow.cn/v1',
+  apiKey: process.env.AGNES_API_KEY,
+  baseURL: 'https://apihub.agnes-ai.com/v1',
 });
 
 export async function POST(req: NextRequest) {
   const { messages } = await req.json();
 
-  if (!process.env.SILICONFLOW_API_KEY) {
+  if (!process.env.AGNES_API_KEY) {
     return new Response(JSON.stringify({ error: 'API key not configured' }), {
       status: 500,
       headers: { 'Content-Type': 'application/json' },
@@ -21,8 +21,10 @@ export async function POST(req: NextRequest) {
   const stream = new ReadableStream({
     async start(controller) {
       try {
+        // Agnes-2.0-Flash 的流式接口 (stream:true) 服务端会挂起不返回数据,
+        // 因此改用非流式调用获取完整回复,再在前端逐块推送以保留打字机体验。
         const completion = await client.chat.completions.create({
-          model: 'Qwen/Qwen3-8B',
+          model: 'agnes-2.0-flash',
           messages: [
             {
               role: 'system',
@@ -31,15 +33,21 @@ export async function POST(req: NextRequest) {
             },
             ...messages,
           ],
-          stream: true,
-          max_tokens: 1024,
+          stream: false,
+          // Agnes-2.0-Flash 是推理模型,会先消耗大量 token 生成思维链
+          // (reasoning_content),再输出正式回复 (content)。1024 会被思维链
+          // 耗尽导致 content 为空,因此调到 4096 保证正式回复有足够额度。
+          max_tokens: 4096,
         });
 
-        for await (const chunk of completion) {
-          const delta = chunk.choices[0]?.delta?.content;
-          if (delta) {
-            controller.enqueue(encoder.encode(`data: ${JSON.stringify({ content: delta })}\n\n`));
-          }
+        const fullContent = completion.choices[0]?.message?.content ?? '';
+
+        // 按句号、问号、换行等自然断点切块,模拟流式输出节奏
+        const chunks = fullContent.match(/[^。！？!?\n]+[。！？!?\n]?/g) ?? [fullContent];
+        for (const chunk of chunks) {
+          controller.enqueue(encoder.encode(`data: ${JSON.stringify({ content: chunk })}\n\n`));
+          // 给前端留出渲染时间,呈现打字机效果
+          await new Promise((resolve) => setTimeout(resolve, 30));
         }
 
         controller.enqueue(encoder.encode('data: [DONE]\n\n'));

@@ -286,7 +286,7 @@ export default function AIAssistant() {
                 )}
               </button>
             </div>
-            <p className="text-xs text-gray-400 mt-1.5 text-center">Powered by 硅基流动 · Qwen3-8B</p>
+            <p className="text-xs text-gray-400 mt-1.5 text-center">Powered by Agnes AI · Agnes-2.0-Flash</p>
           </form>
         </div>
       )}
